@@ -7,7 +7,7 @@ basic:
     basicAuth:
         production: { user: '', password: '' }
         staging: { user: '', password: '' }
-        development: null
+        development: { user: '', password: '' }
     breakpoints:
         - 640
         - 1024
@@ -33,14 +33,26 @@ advanced:
     scroll: false
     headers:
         - { header: '', value: '' }
-    cookies: ''
+    cookies: age_gate=21
     custom_js: ''
     custom_css: ''
-    mock_content: ''
+    mock_content:
+        - { selector: '', type: title }
     sensitivity: 30
     night_mode: false
     retina_images: false
     single_ip: false
+    login:
+        type: none
+        click_element: false
+        click_element_selector: ''
+        login_url: ''
+        username: ''
+        password: ''
+        username_selector: ''
+        password_selector: ''
+        submit_selector: ''
+        after_login_selector: ''
     performance:
         workers_production: 30
         workers_nonproduction: 10
